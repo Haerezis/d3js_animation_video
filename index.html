@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+        svg
+        {
+            border: 2px solid black;
+        }
+        </style>
+    </head>
+    <body>
+    </body>
+    <script src="./jquery.js"></script>
+    <script src="./d3.js"></script>
+    <script>
+    var svg = d3.select("body").append("svg")
+        .attr("id","svg")
+        .attr("width", 1920)
+        .attr("height", 1080)
+        .attr("xmlns","http://www.w3.org/2000/svg");
+    var mySquare=svg.append("rect")
+      .attr("x",100)
+      .attr("y",100)
+      .attr("width",100)
+      .attr("height",100);
+
+    mySquare
+      .transition()
+      .attr("x",1000)
+      .duration(2000)
+      .delay(0)
+    </script>
+</html>
